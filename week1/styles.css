@@ -84,12 +84,15 @@ hr{
 }
 
 /*** Footer ****/
-.logohyf {
-	padding-left: 30%;
+.cfooter {
+	background-color:  grey;
+	display:flex;
+	justify-content: center;
+
 }
 .logo {
+	margin-top: 2px;
 	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 5px;
-	width: 150px;
+	border-radius: 8px;
+	width: 100px;
 }
