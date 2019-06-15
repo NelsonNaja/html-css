@@ -1,0 +1,652 @@
+/****        Homework 3 -  HTML-CSS         ****/
+/****  Autor: Mesut and Nelson- for: HYF    ****/
+
+/****  General   ****/
+html {
+    box-sizing: border-box;
+  }
+ *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+ font-family: Roboto,sans-serif;
+ margin:0;
+}
+ul{ 
+  list-style-type:none;
+  padding:0;
+}
+a:link{ 
+    text-decoration:none; 
+}
+
+/***  Header  ****/
+.header, .section1{                           
+  background-color:white;
+  padding-left:1%;
+  padding-right:1%;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: 440px;
+  background-image: url(image/tms-hero3-1.jpg);
+  background-position-x: 50%;
+}
+.hidden-search-area {
+  position: absolute;
+  background-color: #F5F5F5;
+  display: flex;
+  max-width: 100%;
+  height: 40%;
+  display: none;
+}
+.hidden-search-area .search{
+  display: none;
+  font-size: 28px;
+  margin: 5rem 2rem 3rem 2rem;
+  color: #777676;
+  border-bottom: 1px solid rgb(97, 97, 97);
+}
+hr.search{
+border-top: 2px solid rgb(75, 75, 75);
+}
+.dropdownsearch img:hover + .hidden-search-area {
+  display: block;
+}
+.sectionn {
+  position: relative;
+  display: inline-block;
+  max-height: 3rem; 
+}
+.google-logo img{
+    display: inline-flex;
+    padding: 0%;
+    width: 10rem;
+}
+.location-select select{
+  position: relative;
+  background-color:  rgb(255, 255, 255);
+  border:0;
+  color:rgb(133, 133, 133);
+  font-size:1rem; 
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.main-menu {
+  position: relative;
+  margin-top: 1em;
+  max-height: 2rem;
+  margin-left: 20%;
+  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.2em;
+}
+.dropdownmenu {
+  background-color: rgb(255, 255, 255);
+  color: rgb(63, 63, 63);
+  padding: 16px 8px 16px 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  letter-spacing:1px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 16;
+  margin: auto;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #e2e2e2;
+  box-sizing: border-box;
+}
+.dropdown:hover .dropdown-content  {
+  display: block;
+}
+.dropdown:hover .dropdownmenu {
+  background-color:#f1f1f1;
+}
+.search{
+  position: relative;
+  display: inline-block;
+  margin-left: 0.2em;
+  margin-top: 0.5rem;
+  width:100%;
+}
+.search-content {
+  display: none;
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+}
+.dropdownsearch:hover .search-content  {
+  display: block;
+}
+.search-content img {
+  width: 3rem;
+}
+.dropdownsearch {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem; 
+  margin-left: 1em;
+  height: 2rem;
+  width:2%;
+}
+
+/***  Section 1 - Insights ****/
+.hero-title {
+  color:rgb(66, 66, 66);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 33px;
+  letter-spacing: 0.3px;
+  line-height: 39px;
+  margin-left: 6rem;
+  margin-top:3rem;
+}
+.section1 {
+  position: absolute;
+  background-color: transparent;
+  margin-top: 6rem;
+  padding: 0%;
+}
+.hero-description{
+margin-left:6rem;
+}
+.button-subscribe {
+  flex:1 1 100%;
+  font-size:  1rem;
+  height: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-left: 4.2rem;
+}
+.button-subscribe a{
+ color:white;
+ background-color: #3367D6;
+ padding: 1rem;
+}
+.button-subscribe a:hover{
+    background-color: #4285F4;
+}
+.linktext {
+  margin-left: 75%;
+  margin-top: 18%;
+}
+.linktext a {
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  text-align: right;
+  line-height: 22.4px;
+  color: rgb(67, 111, 206);
+  font-weight:bold;
+}
+
+/****** Section 2 - Latest trends ******/
+.latestt{
+  padding-left:6%;
+  padding-right:6%;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content:left;
+  max-width: 100%;
+  padding-bottom:3rem;
+}
+.latestt img{
+  width: 100%;
+}
+.latestt>.name-section{
+  flex:1 1 100%;
+  font-size:1.8rem;
+  line-height :3rem;
+  height: 4rem;
+  padding-top: 2rem;
+  margin-bottom: 1rem;
+  color:#909090;
+}
+.latestt>.tool1-big {
+  flex:1 1 45%;
+  position:relative;  
+  height: 22rem;
+  font-size:1rem;
+  line-height :2rem;
+  margin-top: 1rem;
+  margin-right:1rem;
+  box-shadow: 0 4px 2px -2px gray;
+  background-image: linear-gradient(
+    rgba(243, 240, 240, 0.5),
+    rgba(51, 51, 51, 0.5)
+  ),
+url(./image/HBR-Thumbnail.jpg);
+background-size:contain;  
+background-repeat:no-repeat;
+}
+.latestt>.tool1-big>.tool1-description{
+position: absolute;
+top: 50%;
+left: 5%;
+width:80%;
+color:white;
+line-height: 25px;
+font-size: 18px;
+font-family: Roboto, sans-serif;
+}
+.latestt>.tool1-big>.tool1-more a{
+  color:white;
+  }
+.latestt>.tool1-big>.tool1-more{
+position: absolute;
+top: 82%;
+left: 4%;
+width:60%;
+color:white;
+}
+.latestt>.tool1-big>.tool1-more a{
+  color:white;
+  font-size:1rem;
+}
+.latestt>.tool1 {
+  background-color: fff;
+  position: relative;
+  flex:1 1 20%;
+  font-size:18px;
+  line-height :25px;
+  margin-top: 1rem;
+  margin-right:1rem;
+  box-shadow: 0 4px 2px -2px gray;
+  text-align:center;
+  color: #4d4d4d;
+}
+.latestt>.tool1>.tool1-description{
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  width:80%;
+  font-family: Roboto, sans-serif;
+}
+.latestt>.tool1>.tool1-more {
+  position: absolute;
+  top: 85%;
+  left: 20%;
+  text-align: center;
+}
+.latestt>.tool1>.tool1-more a{
+  font-size:  1rem;
+  color: #5E5E5E;
+}
+
+/**** Definiton of Section 3, 4 and footer   ****/
+.section,.footer {
+    margin:0;
+    padding: 0;
+    width:100%;
+    height: auto;
+    display: inline-block;
+}
+.section.marketing{                  /****  Margin and background for section 3 and 4 ****/              
+    background-color:#FAFAFA;
+    padding-left:6%;
+    padding-right:6%;
+}
+
+/**** Section 3 - Marketing      ****/ 
+.section.marketing.deeper{
+ display: flex;
+ flex-flow: wrap; 
+ justify-content:space-around;
+ background:white;
+}
+.section.marketing.deeper>.name-section{
+  flex:1 1 100%;
+  font-size:31px;
+  line-height :3rem;
+  height: 4rem;
+  padding-top: 2rem;
+  color:#585858;
+}
+.section.marketing.deeper>.sub-section{
+  flex:1 1 5%;
+  font-size:1rem;
+  line-height :2rem;
+  padding-top: 2rem;
+}
+.section.marketing.deeper>.sub-section>.sub-title{
+  font-size:1.2rem;
+  line-height :2.5rem;
+  color:#5E5E5E;
+}
+.section.marketing.deeper>.sub-section>.sub-title img{
+  width:5%; 
+}
+
+/**** Section 4 - Tools     ****/ 
+.section.marketing.marketers{
+  display: flex;
+  flex-flow: wrap; 
+  justify-content:space-between;
+}
+.section.marketing.marketers>.name-section{
+  flex:1 1 100%;
+  font-size:1.8rem;
+  line-height :3rem;
+  height: 4rem;
+  padding-top: 2rem;
+  color:#909090;
+}
+.section.marketing.marketers>.tool{
+  flex:1 1 10%;
+  font-size:1rem;
+  line-height :2rem;
+  margin-top: 2rem;
+  margin-right:1rem;
+  margin-bottom: 2rem;
+  border: 1px solid #EDEDED;
+  background-color: white;
+  box-shadow: 0 4px 2px -2px gray;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.section.marketing.marketers>.tool:hover{
+  box-shadow: 1px 1px 1px 1px gray;
+}
+.section.marketing.marketers img{
+   width:100%;
+}
+.section.marketing.marketers .tool-name{
+  margin-top: 1rem;
+  font-size:  1rem;
+  line-height:1rem;
+  margin:0.8rem;
+}
+.section.marketing.marketers .tool-description{
+  margin-top: 1rem;
+  font-size:  0.9rem;    
+  line-height:1.2rem;
+  margin:0.8rem;
+  opacity:0.8;
+}
+.section.marketing.marketers .tool-more{
+  font-size:  0.8rem;
+  margin-left:1rem;
+  margin:0.8rem;
+}
+.section.marketing.marketers .buttom-tools{
+  flex:1 1 100%;
+  font-size:  0.8rem;
+  height: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section.marketing.marketers .buttom-tools a{
+ color:white;
+ background-color: #3367D6;
+ padding: 1rem;
+}
+.section.marketing.marketers .buttom-tools a:hover{
+  background-color: #4285F4;
+}
+
+/****    footer      ****/ 
+.footer{
+  background-color: #3367D6;
+  display: flex;
+  flex-flow: wrap; 
+  justify-content:space-between;
+  color:white;
+  padding-left:6%;
+  padding-right:6%;
+ }
+.footer a{
+ color:white;  
+}
+.footer{
+ padding-bottom:5vh;
+ padding-top:5vh;
+ font-weight:lighter;
+}
+.footer>.text-footer{
+ flex:1 1 100%;
+ padding-left: 3rem;
+ font-size:2rem;
+ }
+.footer>.buttom-footer {
+  margin-top:2rem;
+  padding-left: 3rem;
+  flex:1 1 100%;
+  font-size: 0.8rem;
+}
+.footer>.buttom-footer a{
+  color: #4B79DB;
+  background-color: white ;
+  padding: 0.5rem;
+}
+.footer hr{
+  flex:1 1 100%;
+  padding-left:0%;
+  padding-right:18%;
+}
+hr{
+  margin-top: 3rem;
+  border: 0.3px solid #C5D1ED;
+} 
+.footer>.footer-about-google{
+  flex:1 1 80%;
+  font-size: 0.9rem;
+  margin-top:1rem;
+  margin-bottom:2rem;
+}
+.footer>.footer-about-google li{
+  margin:0.5rem;
+  display:inline;
+}
+.footer>.footer-language{
+  flex:1 1 80%;
+}
+.footer>.footer-language select{
+  background-color:  #3367D6;
+  border:0;
+  color:white;
+  font-size:1rem; 
+}
+.footer>.footer-socialnetwork{
+  flex:1 1 20%;
+}
+.footer>.footer-socialnetwork li, a{
+  margin:0.5rem;
+  display:inline;
+  fill:white;
+  transform-origin: 10px 10px;
+}
+#social-img-sgv{
+  width:8%;
+}
+#google-sgv{
+  width:6%;
+}
+
+/**** Media Qurrys for tablet ****/ 
+@media (min-width: 676px) and (max-width: 1000px) {
+  /**** header   and section 1 ****/ 
+.main-menu, .section1>.hero>.hero-description,.section1>.hero>.button-subscribe,
+.header>.sectionn>.location-select,.header>.linktext,.search,.dropdownsearch {
+  visibility: hidden;
+}
+.header{
+  background-image: none;
+  background-color:white;
+  height:20rem;
+}
+.dropdownsearch {
+  height: 2rem;
+  width:5%;
+}
+.header>.section1>.hero>.hero-title{
+  margin-left:0%;
+  width:80%; 
+}
+.header>.main-menu{
+  width:0;
+}
+/****section 2 ****/ 
+.latestt>.tool1-big {
+    flex:1 1 80%;
+}
+.latestt>.tool1 {
+  flex:1 1 45%;
+  height: 22rem;
+}
+.latestt>.tool1>.tool1-more {
+  top: 90%;
+  left: 15%;
+}
+/**** Section 3    ****/ 
+.section.marketing.deeper>.sub-section{
+  flex:1 1 45%;
+  font-size:1rem;
+  line-height :2rem;
+  padding-top: 2rem;
+}
+.section.marketing.deeper>.sub-section:nth-of-type(4) li{
+ width:45%;
+ }
+/**** Section 4  ****/ 
+.section.marketing.marketers>.tool{
+  flex:1 1 45%;
+  margin-bottom: 0.5rem;
+ }
+ /**** footer ****/ 
+.footer>.footer-about-google{  flex:1 1 100%;}
+.footer>.footer-about-google li:nth-of-type(1){
+ display: block;
+}
+.footer>.footer-socialnetwork{  flex:1 1 20%;}
+.footer>.footer-socialnetwork li, a{
+  margin:0.1rem;
+ }
+#social-img-sgv{  width:12%;}
+#google-sgv{  width:10%;}
+}
+
+
+/**** Media Qurrys for smartphones ****/ 
+@media  (max-width:675px) {
+/**** header   and section 1 ****/ 
+.main-menu, .section1>.hero>.hero-description,.section1>.hero>.button-subscribe,
+.header>.sectionn>.location-select,.header>.linktext,.search,.dropdownsearch {
+  visibility: hidden;
+}
+.header{
+  background-image: none;
+  background-color:white;
+  height:20rem;
+}
+.header>.main-menu{
+  width:0;
+}
+.dropdownsearch {
+  width:5%;
+}
+.header>.section1>.hero>.hero-title{
+  margin-left:0%;
+  width:80%; 
+ }
+/****section 2 ****/ 
+.latestt>.tool1-big {
+  flex:1 1 80%;
+  height: 18rem;
+}
+.latestt>.tool1 {
+  flex:1 1 80%;
+  height: 7rem;
+  text-align: left; 
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+.latestt>.tool1 img {
+  position: absolute;
+  width:30%;
+  top: 20%;
+}
+.latestt>.tool1>.tool1-more {
+  top: 70%;
+  left: 30%;
+}
+.latestt>.tool1>.tool1-description{
+  top: 10%;
+  left: 30%;
+  width:65%;
+}
+.latestt>.tool1>.tool1-more a{
+  top: 60%;
+  left: 30%;
+}
+/**** Section 3   ****/ 
+.section.marketing.deeper>.sub-section{
+  flex:1 1 80%;
+  font-size:1rem;
+  line-height :2rem;
+  padding-top: 2rem;
+}
+/**** Section 4  ****/ 
+.section.marketing.marketers>.tool{
+  flex:1 1 80%;
+  position:relative;
+  margin-bottom: 0.0rem;
+  margin-top: 1rem;
+  height: 8rem;
+}
+ .section.marketing.marketers img{
+  position:absolute;
+  width:28%;
+  margin:2%;
+}
+.section.marketing.marketers .tool-name{
+  position:absolute;
+  top:0%;
+  left:30%;
+  width:65%;
+}
+.section.marketing.marketers .tool-description{
+  position:relative;
+  top:23%;
+  left:30%;
+  width:65%;
+}
+.section.marketing.marketers .tool-more{
+  position:relative;
+  top:15%;
+  left:30%;
+  width:65%;
+}
+
+/**** footer ****/ 
+.footer>.footer-about-google{  flex:1 1 100%;}
+.footer>.footer-about-google li:nth-of-type(1){
+ display: block;
+}
+.footer>.footer-socialnetwork{  flex:1 1 30%;}
+.footer>.footer-socialnetwork li, a{
+  margin:0.1rem;
+ }
+#social-img-sgv{  width:5 %;}
+#google-sgv{  width:10%;}
+}
+
+
+
+
+
